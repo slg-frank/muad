@@ -1,0 +1,12 @@
+{
+    "random_seed": 42,
+    "gpu": false,
+    "lr": 0.001,
+    "patience": 15,
+    "result_dir": "./result/",
+    "evaluation_epoch": 5,
+    "max_iter": 30,
+    "precicison": 0.9999,
+    "epochs": 50,
+     "hidden_dim": [64, 64]
+}
