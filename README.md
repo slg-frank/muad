@@ -1,38 +1,38 @@
 # MUAD Project
 
-Project structure：
+Project structure:
 
 ```
 MUAD/
-├── configs/                  # 配置文件
-│   └── params.json           # 模型参数配置
-├── data/                     # 数据加载和处理
+├── configs/                  # configuration files
+│   └── params.json           # model parameter configuration
+├── data/                     # data loading and processing
 │   ├── __init__.py
-│   ├── dataset.py            # 数据集类定义
-│   └── utils.py              # 数据处理工具
-├── models/                   # 模型定义
+│   ├── dataset.py            # dataset class definitions
+│   └── utils.py              # data processing utilities
+├── models/                   # model definitions
 │   ├── __init__.py
-│   ├── encoders.py           # 多模态编码器
-│   ├── graph_model.py        # 图神经网络组件
-│   ├── layers.py             # 基础网络层
-│   └── main_model.py         # 主模型集成
-├── training/                 # 训练相关
+│   ├── encoders.py           # multimodal encoders
+│   ├── graph_model.py        # graph neural network components
+│   ├── layers.py             # basic network layers
+│   └── main_model.py         # main model integration
+├── training/                 # training related
 │   ├── __init__.py
-│   └── base_model.py         # 基础训练框架
-├── active_learning/          # 主动学习模块
+│   └── base_model.py         # base training framework
+├── active_learning/          # active learning module
 │   ├── __init__.py
-│   └── strategies.py         # 主动学习策略
-├── utils/                    # 工具函数
+│   └── strategies.py         # active learning strategies
+├── utils/                    # utility functions
 │   ├── __init__.py
-│   ├── general_utils.py      # 通用工具
-│   └── logging_utils.py      # 日志工具
-├── main.py                   # 主入口程序
-└── README.md                 # 项目文档
+│   ├── general_utils.py      # general utilities
+│   └── logging_utils.py      # logging utilities
+├── main.py                   # main entry script
+└── README.md                 # project documentation
 ```
 
-The instructions for running model MUAD are as follows.
+The instructions for running MUAD are as follows.
 
-```python
+```bash
 python main.py
 ```
 

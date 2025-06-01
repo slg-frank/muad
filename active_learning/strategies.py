@@ -25,7 +25,7 @@ def entropy_based_selection(model, dataloader, device, n_samples=5):
             uncertainties.extend(avg_entropy.cpu().numpy())
             indices.extend(range(batch_idx * len(labels), (batch_idx + 1) * len(labels)))
 
-    # 选择最不确定的样本
+    # select the most uncertain samples
     sorted_indices = np.argsort(uncertainties)[::-1]
     return [indices[i] for i in sorted_indices]
 
@@ -52,15 +52,15 @@ def confidence_based_selection(model, dataloader, device, confidence_threshold=0
 
 
 def hybrid_selection(model, dataloader, device, n_select=200, confidence_threshold=0.9):
-    # 第一步：选择不确定样本
+    # Step 1: select uncertain samples
     uncertain_indices = entropy_based_selection(model, dataloader, device)
     selected_uncertain = uncertain_indices[:n_select]
 
-    # 第二步：获取高置信度样本
+    # Step 2: obtain high-confidence samples
     high_conf_indices, pseudo_labels = confidence_based_selection(
         model, dataloader, device, confidence_threshold)
 
-    # 移除重复样本
+    # Remove duplicate samples
     final_uncertain = [idx for idx in selected_uncertain if idx not in high_conf_indices]
 
     return final_uncertain, high_conf_indices, pseudo_labels
