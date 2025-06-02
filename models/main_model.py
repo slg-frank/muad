@@ -49,7 +49,7 @@ class MainModel(nn.Module):
         self.log_uncertain_block = UncertainBlock()
         self.trace_uncertain_block = UncertainBlock()
 
-        # TCP classifier and confidence layers
+
         self.TCPClassifierLayer_trace = LinearLayer(hidden_dim[0], num_class)
         self.TCPConfidenceLayer_trace = LinearLayer(hidden_dim[0], 1)
         self.TCPClassifierLayer_metric = LinearLayer(hidden_dim[0], num_class)
@@ -58,7 +58,7 @@ class MainModel(nn.Module):
         self.TCPConfidenceLayer_log = LinearLayer(hidden_dim[0], 1)
         self.TCPConfidenceLayer = LinearLayer(192, 1)
 
-        # Multimodal classifier
+
         mm_layers = []
         for i in range(1, len(hidden_dim)):
             in_dim = 3 * hidden_dim[0] if i == 1 else hidden_dim[i - 1]
@@ -84,7 +84,7 @@ class MainModel(nn.Module):
         y_anomaly = (fault_indexs >= 1).long()
 
         criterion = nn.CrossEntropyLoss()
-        # Compute confidence loss for each modality
+
         confidence_loss_trace = self._compute_confidence_loss(
             new_trace, y_anomaly, self.TCPClassifierLayer_trace, self.TCPConfidenceLayer_trace, criterion)
         confidence_loss_metric = self._compute_confidence_loss(
@@ -93,7 +93,7 @@ class MainModel(nn.Module):
             new_log, y_anomaly, self.TCPClassifierLayer_log, self.TCPConfidenceLayer_log, criterion)
         confidence_loss = confidence_loss_trace + confidence_loss_metric + confidence_loss_log
 
-        # Feature fusion
+
         TCPConfidence_trace_sig = torch.sigmoid(self.TCPConfidenceLayer_trace(new_trace))
         TCPConfidence_metric_sig = torch.sigmoid(self.TCPConfidenceLayer_metric(new_metric))
         TCPConfidence_log_sig = torch.sigmoid(self.TCPConfidenceLayer_log(new_log))
@@ -107,7 +107,7 @@ class MainModel(nn.Module):
         MMlogit = self.MMClasifier(feature)
         MMLoss = criterion(MMlogit, y_anomaly)
 
-        # Total loss
+
         total_loss = MMLoss + 0.6 * confidence_loss + mean_kl_loss
         y_pred = self.inference(MMlogit)
 

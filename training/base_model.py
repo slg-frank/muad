@@ -72,7 +72,7 @@ class BaseModel(nn.Module):
             avg_loss = total_loss / len(train_loader)
             logging.info(f"Epoch {epoch}/{self.epochs}, Loss: {avg_loss:.5f}")
 
-            # Early stopping mechanism
+
             if avg_loss > prev_loss:
                 worse_count += 1
                 if worse_count >= self.patience:
@@ -82,7 +82,7 @@ class BaseModel(nn.Module):
                 worse_count = 0
             prev_loss = avg_loss
 
-            # Periodic evaluation
+
             if epoch % evaluation_epoch == 0 and test_loader:
                 test_results = self.evaluate(test_loader)
                 if test_results["F1"] > best_f1:

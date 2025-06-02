@@ -1,1 +1,122 @@
-# Required packages
+absl-py==2.1.0
+alabaster==0.7.13
+Babel==2.14.0
+backcall==0.2.0
+brotlipy==0.7.0
+cachetools==4.2.1
+certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
+cffi @ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click==8.1.8
+colorama==0.4.6
+cryptography @ file:///C:/b/abs_8ecplyc3n2/croot/cryptography_1677533105000/work
+cycler==0.11.0
+cypari==2.5.4
+Cython==0.29.28
+dataclasses-json==0.6.7
+decorator==5.1.1
+dgl==2.0.0
+dill==0.3.7
+dnspython==2.3.0
+docutils==0.19
+drain3==0.9.11
+elasticsearch==6.3.1
+filelock==3.12.2
+fonttools==4.38.0
+frozendict==2.4.6
+FXrays==1.3.6
+gensim==4.2.0
+google-auth==2.40.1
+google-auth-oauthlib==0.4.6
+grpcio==1.62.3
+HeapDict==1.0.1
+idna @ file:///C:/b/abs_bdhbebrioa/croot/idna_1666125572046/work
+idx2numpy==1.2.3
+imageio==2.31.2
+imagesize==1.4.1
+importlib-metadata==6.7.0
+ipython==7.34.0
+jedi==0.19.2
+Jinja2==3.1.4
+joblib==1.3.2
+jsonpickle==1.5.1
+kiwisolver==1.4.5
+knot-floer-homology==1.2
+low-index==1.2
+Markdown==3.4.4
+MarkupSafe==2.1.5
+marshmallow==3.19.0
+matplotlib==3.5.3
+matplotlib-inline==0.1.6
+mkl-fft==1.3.1
+mkl-random @ file:///C:/ci/mkl_random_1626186163140/work
+mkl-service==2.4.0
+ml-essentials @ git+https://gitee.com/haowen-xu/ml-essentials@fcdfbc34b8d539f058b4289b2d3f141a0b28cefd
+mypy-extensions==1.0.0
+networkx==2.6.3
+numpy @ file:///C:/ci/numpy_and_numpy_base_1653574840943/work
+numpydoc==1.5.0
+oauthlib==3.2.2
+packaging==24.0
+pandas==1.3.5
+parso==0.8.4
+pickleshare==0.7.5
+Pillow==9.3.0
+plink==2.4.6
+portalocker==2.7.0
+prompt_toolkit==3.0.48
+protobuf==3.20.3
+psutil==6.1.0
+pyasn1==0.5.1
+pyasn1-modules==0.3.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+Pygments==2.17.2
+pymongo==4.7.3
+pyOpenSSL @ file:///C:/b/abs_552w85x1jz/croot/pyopenssl_1677607703691/work
+pyparsing==3.1.4
+pypng==0.20220715.0
+PySocks @ file:///C:/ci/pysocks_1594394709107/work
+python-dateutil==2.9.0.post0
+pytz==2024.2
+pywin32==308
+PyYAML==6.0.1
+requests @ file:///C:/ci/requests_1657735288441/work
+requests-oauthlib==2.0.0
+rsa==4.9.1
+scikit-learn==1.0.2
+scipy==1.7.3
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smart-open==7.1.0
+snappy_manifolds==1.2.1
+snowballstemmer==2.2.0
+spherogram==2.2.1
+Sphinx==5.3.0
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==2.0.0
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.5
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorkit @ git+https://gitee.com/haowen-xu/tensorkit@092ba74ca574382a7eff45787f8eb437efcc6e13
+terminaltables==3.1.10
+threadpoolctl==3.1.0
+tick==0.7.0.1
+torch==1.13.1
+torchaudio==0.13.1
+torchdata==0.5.1
+torchvision==0.14.1
+tqdm==4.66.5
+traitlets==5.9.0
+typing-inspect==0.9.0
+typing_extensions @ file:///C:/Windows/TEMP/abs_dd2d0moa85/croots/recipe/typing_extensions_1659638831135/work
+urllib3 @ file:///C:/b/abs_9bcwxczrvm/croot/urllib3_1673575521331/work
+wcwidth==0.2.13
+Werkzeug==2.2.3
+win-inet-pton @ file:///C:/ci/win_inet_pton_1605306165655/work
+wincertstore==0.2
+wrapt==1.16.0
+zhusuan @ git+https://gitee.com/mirrors/ZhuSuan.git@4386b2a12ae4f4ed8e694e504e51d7dcdfd6f22a
+zipp==3.15.0
